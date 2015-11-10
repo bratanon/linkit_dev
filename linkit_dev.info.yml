@@ -1,0 +1,6 @@
+name: Linkit Dev Tools
+description: Linkit Dev Tools
+package: Custom
+type: module
+version: 1.0
+core: 8.x

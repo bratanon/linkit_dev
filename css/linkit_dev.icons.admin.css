@@ -1,0 +1,15 @@
+/**
+ * @file
+ * Styling for the user module icons.
+ */
+
+/**
+ * Toolbar tab icon.
+ */
+.toolbar-bar .toolbar-icon-linkit-dev:before {
+  background-image: url(../../../core/misc/icons/bebebe/cog.svg);
+}
+.toolbar-bar .toolbar-icon-linkit-dev:active:before,
+.toolbar-bar .toolbar-icon-linkit-dev.is-active:before {
+  background-image: url(../../../core/misc/icons/bebebe/cog.svg);
+}

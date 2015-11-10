@@ -1,0 +1,58 @@
+<?php
+
+/**
+ * @file
+ * Linkit Dev Tools with common used tools for developing the linkit module.
+ */
+
+use Drupal\Core\Url;
+
+/**
+ * Get all linkit tests.
+ */
+function linkit_dev_get_all() {
+  return \Drupal::service('test_discovery')->getTestClasses('linkit');
+}
+
+/**
+ * Implements hook_toolbar().
+ */
+function linkit_dev_toolbar() {
+  $links = [
+    'run-tests' => [
+      'title' => t('Run Tests'),
+      'url' => Url::fromRoute('linkit_dev.run_tests'),
+    ],
+  ];
+
+  $items['linkit_dev'] = [
+    '#type' => 'toolbar_item',
+    'tab' => [
+      '#type' => 'link',
+      '#title' => t('Linkit Dev Tools'),
+      '#url' => Url::fromRoute('linkit_dev.run_tests'),
+      '#attributes' => [
+        'title' => t('Linkit Dev Tools'),
+        'class' => ['toolbar-icon', 'toolbar-icon-linkit-dev'],
+      ],
+    ],
+    'tray' => [
+      '#heading' => t('Linkit Dev Tools'),
+      'linkit_dev_links' => [
+        '#theme' => 'links__toolbar_user',
+        '#links' => $links,
+        '#attributes' => [
+          'class' => ['toolbar-menu'],
+        ],
+      ],
+    ],
+    '#weight' => 100,
+    '#attached' => [
+      'library' => [
+        'linkit_dev/linkit_dev.icons',
+      ],
+    ],
+  ];
+
+  return $items;
+}

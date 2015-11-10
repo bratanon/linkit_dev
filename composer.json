@@ -1,0 +1,6 @@
+{
+  "name": "drupal/linkit_dev",
+  "description": "Linkit Dev Tools",
+  "type": "drupal-module",
+  "license": "GPL-2.0+"
+}

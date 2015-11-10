@@ -1,0 +1,7 @@
+linkit_dev.run_tests:
+  path: '/admin/linkit_dev/run-tests'
+  defaults:
+    _form: '\Drupal\linkit_dev\Form\LinkitDevTestForm'
+    _title: 'Run Linkit tests'
+  requirements:
+    _access: 'TRUE'

@@ -1,0 +1,5 @@
+linkit_dev.icons:
+  version: VERSION
+  css:
+    theme:
+      css/linkit_dev.icons.admin.css: {}
